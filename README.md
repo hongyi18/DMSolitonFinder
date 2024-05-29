@@ -37,3 +37,9 @@ One thing you can try is slightly changing the values of the options ``FirstMini
 
 **5. What can I do if soliton profiles are not accurate at large radii?** <br>
 In addition to increasing ``WorkingPrecision``, ``AccuracyGoal``, and ``PrecisionGoal``, you can also try slightly changing the values of the options ``InitialMaxRadius`` and ``InitialStepRadius`` in ``ShootFields``, which control the initial range of solutions and the initial step used to increase the radius.
+
+**6. What can I do if desired solutions are not found after the requested number of loops?** <br>
+Try increasing `MaxIteration`, whose default value is $10^{3}$.
+
+**7. How can I see the intermediate values of solutions at each loop, e.g., for debugging purpose?** <br>
+This can be done by setting ``IfPrintProgress->1``. In this case, one can monitor the intermediate values of $\\{\Psi \text{i}, \text{d} \Psi, \text{rf}, \text{drf}\\}$ at each loop, which refers to the current value of $\Psi[r]$ at the inner boundary, current step for increasing $\Psi \text{i}$, current range of the solutions, and current step for increasing $\text{rf}$.
