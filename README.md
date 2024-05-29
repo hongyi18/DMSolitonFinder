@@ -17,6 +17,6 @@ To load the package, simply run
 ```
 
 ## Tutorial
-Please follow the Mathematica notebook [Get started on DMSolitonFinder.nb]() for a quick tutorial.
+Please follow the Mathematica notebook [Get started on DMSolitonFinder.nb](https://github.com/hongyi18/DMSolitonFinder/blob/main/Get%20started%20on%20DMSolitonFinder.nb) for a quick tutorial. For definitions and equations used in the package, refer to the paper [arXiv:123456]().
 
 ## Common problems in finding optimal soliton profiles
