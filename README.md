@@ -1,6 +1,6 @@
 # DMSolitonFinder
 
-## Installation
+## Installation/update
 
 **Method 1:** One can directly import the package from the web every time, using
 ```
@@ -15,6 +15,8 @@ To load the package, simply run
 ```
 <<DMSolitonFinder`
 ```
+
+**Note:** If the installation/update fails, please check your internet connection by following the guide [Troubleshooting Internet Connectivity Problems](https://reference.wolfram.com/language/tutorial/TroubleshootingInternetConnectivity.html).
 
 ## Tutorial
 Please follow the Mathematica notebook [Get started on DMSolitonFinder.nb](https://github.com/hongyi18/DMSolitonFinder/blob/main/Get%20started%20on%20DMSolitonFinder.nb) for a quick tutorial. For definitions and equations used in the package, refer to the paper [arXiv:123456]().
