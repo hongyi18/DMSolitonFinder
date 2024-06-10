@@ -119,17 +119,19 @@ ShootFields[fi_, opts:OptionsPattern[]] := Block[
 	(* Local parameters for internal calculations. Do not modify them. *)
 	{\[CapitalPsi]i=OptionValue[InitialValuePsi], d\[CapitalPsi]=OptionValue[InitialStepPsi], rf=OptionValue[InitialMaxRadius], drf=OptionValue[InitialStepRadius]
 	, ifSolsUpdate\[CapitalPsi]iError=0, ifSolsUpdaterfError=0, nPointLargeRadius=5, precision=10^(-OptionValue[WorkingPrecision]+1)
-	, ifInitialError=0, ifInitial\[CapitalPsi]iTooBig=0, ifd\[CapitalPsi]TooSmall=0, ifdrfTooSmall=0, ifMaxIterationReached=0
+	, iffiReachCriticalValue, ifInitialError=0, ifInitial\[CapitalPsi]iTooBig=0, ifd\[CapitalPsi]TooSmall=0, ifdrfTooSmall=0, ifMaxIterationReached=0
 	, sols, firstMinimum, ampLargeRadius, \[CapitalPsi]iTest, rfTest, nStop}
 	
 	(* Solve field equations. If error occurs in solving the equations, return the trivial solutions of the system. *)
 	(* For the shooting algorithm to work, the initial \[CapitalPsi]i should be such small that the first local minimum of f[r] is negative. *)
-	, sols = Quiet@Check[SolveFields[fi, \[CapitalPsi]i, rf, Evaluate@FilterRules[Join[{opts}, Options[ShootFields]], Options[SolveFields]]]
+	, If[OptionValue[NGI]!=0, If[fi>=1/2/Abs[OptionValue[NGI]], iffiReachCriticalValue=1]]
+	; sols = Quiet@Check[SolveFields[fi, \[CapitalPsi]i, rf, Evaluate@FilterRules[Join[{opts}, Options[ShootFields]], Options[SolveFields]]]
 		, ifInitialError=1; SolveFields[0, 0, rf, Evaluate@FilterRules[Join[{opts}, Options[ShootFields]], Options[SolveFields]]]]
-	; If[ifInitialError==0, firstMinimum = calFirstMinimum[sols[[1]], OptionValue[MinRadius], rf, OptionValue[WorkingPrecision]]
+	; If[iffiReachCriticalValue==0 && ifInitialError==0
+		, firstMinimum = calFirstMinimum[sols[[1]], OptionValue[MinRadius], rf, OptionValue[WorkingPrecision]]
 		; If[firstMinimum[[1]]>0 && N[firstMinimum[[2,1,2]],3]<N[rf,3], ifInitial\[CapitalPsi]iTooBig=1]]
 	
-	; If[ifInitialError==0 && ifInitial\[CapitalPsi]iTooBig==0
+	; If[iffiReachCriticalValue==0 && ifInitialError==0 && ifInitial\[CapitalPsi]iTooBig==0
 		, If[OptionValue[IfPrintProgress]==1, Print["Values of {\[CapitalPsi]i, d\[CapitalPsi], rf, drf} are:"] ] 
 		; Do[
 			(* Try increasing \[CapitalPsi]i. *)
@@ -166,10 +168,11 @@ ShootFields[fi_, opts:OptionsPattern[]] := Block[
 			; If[Abs@drf<rf/10/OptionValue[MaxIteration], ifdrfTooSmall=1; nStop=n; Break[]]
 			; If[n==OptionValue[MaxIteration], ifMaxIterationReached=1; nStop=n; Break[]]	
 			, {n, OptionValue[MaxIteration]}]]
+	; If[iffiReachCriticalValue==1, Print["For fi=", fi, ", the field amplitude has reached the critical value due to nonminiaml gravitational interactions and no soliton solutions are expected to exist."]
 	; If[ifInitialError==1
 		, Print["For fi=", fi, ", initial guesses are bad or some other error messages are generated."]
-		; SolveFields[fi, \[CapitalPsi]i, rf, Evaluate@FilterRules[Join[{opts}, Options[ShootFields]], Options[SolveFields]]]
-		, If[ifInitial\[CapitalPsi]iTooBig==1, Print["For fi=", fi, ", the initial value \[CapitalPsi]i is too big. Try decreasing InitialValuePsi."]] ]
+		; SolveFields[fi, \[CapitalPsi]i, rf, Evaluate@FilterRules[Join[{opts}, Options[ShootFields]], Options[SolveFields]]] ]
+	; If[ifInitial\[CapitalPsi]iTooBig==1, Print["For fi=", fi, ", the initial value \[CapitalPsi]i is too big. Try decreasing InitialValuePsi."]]
 	; If[ampLargeRadius > OptionValue[AmpTolerance] fi
 		, If[ifd\[CapitalPsi]TooSmall==1, Print["For fi=", fi, ", requested precision is reached after ", nStop, " calculations, relative amplitude at large radius is ", ampLargeRadius/fi, "."]]
 		; If[ifdrfTooSmall==1, Print["For fi=", fi, ", increasing rf doesn't improve results after ", nStop, " calculations, relative amplitude at large radius is ", ampLargeRadius/fi, "."]]
