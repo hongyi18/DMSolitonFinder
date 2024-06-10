@@ -10,7 +10,7 @@
 
 BeginPackage["DMSolitonFinder`"];
 Print["DMSolitonFinder 1.0 has been loaded."];
-Print["Please cite ", Hyperlink["arXiv:123456", "https://hongyi18.github.io/"], " if you find this package helpful for your research."]
+Print["Please cite ", Hyperlink["arXiv:2406.05031", "https://arxiv.org/abs/2406.05031"], " if you find this package helpful for your research."]
 
 
 MassDensity::usage = "
