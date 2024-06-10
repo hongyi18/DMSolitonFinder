@@ -45,3 +45,6 @@ Try increasing `MaxIteration`, whose default value is $10^{3}$.
 
 **7. How can I see the intermediate values of solutions at each loop, e.g., for debugging purpose?** <br>
 This can be done by setting ``IfPrintProgress->1``. In this case, one can monitor the intermediate values of $\\{\Psi \text{i}, \text{d} \Psi, \text{rf}, \text{drf}\\}$ at each loop, which refers to the current value of $\Psi[r]$ at the inner boundary, current step for increasing $\Psi \text{i}$, current range of the solutions, and current step for increasing $\text{rf}$.
+
+## Contact
+If you find any bugs, please report them to my email address displayed on [my website](https://hongyi18.github.io/).
