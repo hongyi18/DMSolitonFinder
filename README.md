@@ -19,7 +19,7 @@ To load the package, simply run
 **Note:** If the installation/update fails, please check your internet connection by following the guide [Troubleshooting Internet Connectivity Problems](https://reference.wolfram.com/language/tutorial/TroubleshootingInternetConnectivity.html).
 
 ## Tutorial
-Please follow the Mathematica notebook [Get started on DMSolitonFinder.nb](https://github.com/hongyi18/DMSolitonFinder/blob/main/Get%20started%20on%20DMSolitonFinder.nb) for a quick tutorial. For definitions and equations used in the package, refer to the paper [arXiv:123456]().
+Please follow the Mathematica notebook [Get started on DMSolitonFinder.nb](https://github.com/hongyi18/DMSolitonFinder/blob/main/Get%20started%20on%20DMSolitonFinder.nb) for a quick tutorial. For definitions and equations used in the package, refer to the paper [arXiv:2406.05031](https://arxiv.org/abs/2406.05031).
 
 ## Common questions in finding optimal soliton profiles
 **1. How can I find out what options are available for each function?** <br>
