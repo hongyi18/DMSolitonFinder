@@ -168,7 +168,7 @@ ShootFields[fi_, opts:OptionsPattern[]] := Block[
 			; If[Abs@drf<rf/10/OptionValue[MaxIteration], ifdrfTooSmall=1; nStop=n; Break[]]
 			; If[n==OptionValue[MaxIteration], ifMaxIterationReached=1; nStop=n; Break[]]	
 			, {n, OptionValue[MaxIteration]}]]
-	; If[iffiReachCriticalValue==1, Print["For fi=", fi, ", the field amplitude has reached the critical value due to nonminiaml gravitational interactions and no soliton solutions are expected to exist."]
+	; If[iffiReachCriticalValue==1, Print["For fi=", fi, ", the field amplitude has reached the critical value due to nonminiaml gravitational interactions and no soliton solutions are expected to exist."]]
 	; If[ifInitialError==1
 		, Print["For fi=", fi, ", initial guesses are bad or some other error messages are generated."]
 		; SolveFields[fi, \[CapitalPsi]i, rf, Evaluate@FilterRules[Join[{opts}, Options[ShootFields]], Options[SolveFields]]] ]
