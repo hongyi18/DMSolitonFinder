@@ -119,7 +119,7 @@ ShootFields[fi_, opts:OptionsPattern[]] := Block[
 	(* Local parameters for internal calculations. Do not modify them. *)
 	{\[CapitalPsi]i=OptionValue[InitialValuePsi], d\[CapitalPsi]=OptionValue[InitialStepPsi], rf=OptionValue[InitialMaxRadius], drf=OptionValue[InitialStepRadius]
 	, ifSolsUpdate\[CapitalPsi]iError=0, ifSolsUpdaterfError=0, nPointLargeRadius=5, precision=10^(-OptionValue[WorkingPrecision]+1)
-	, iffiReachCriticalValue, ifInitialError=0, ifInitial\[CapitalPsi]iTooBig=0, ifd\[CapitalPsi]TooSmall=0, ifdrfTooSmall=0, ifMaxIterationReached=0
+	, iffiReachCriticalValue=0, ifInitialError=0, ifInitial\[CapitalPsi]iTooBig=0, ifd\[CapitalPsi]TooSmall=0, ifdrfTooSmall=0, ifMaxIterationReached=0
 	, sols, firstMinimum, ampLargeRadius, \[CapitalPsi]iTest, rfTest, nStop}
 	
 	(* Solve field equations. If error occurs in solving the equations, return the trivial solutions of the system. *)
