@@ -6,7 +6,7 @@
 (* Website: https://hongyi18.github.io *)
 (* Package Version: 1.0 *)
 (* Mathematica Version: 13.3.1 *)
-(* Date: May 28, 2024 *) 
+(* Date: Jun 10, 2024 *) 
 
 BeginPackage["DMSolitonFinder`"];
 Print["DMSolitonFinder 1.0 has been loaded."];
