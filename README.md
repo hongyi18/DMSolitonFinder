@@ -1,7 +1,7 @@
 # DMSolitonFinder
 
 DMSolitonFinder is a Mathematica package devoted to solving dark matter soliton profiles in an automated way. It will dynamically adjust the boundary conditions and the
-spatial range of solutions until localized solutions are found with the requested precision and accuracy. This package was [featured in the Staff Picks and Publication Materials columns on Wolfram Community](https://community.wolfram.com/groups/-/m/t/3203564).
+spatial range of solutions until localized solutions are found with the requested precision and accuracy. This package is [featured in the Staff Picks and Publication Materials columns on Wolfram Community](https://community.wolfram.com/groups/-/m/t/3203564).
 
 ## Installation/update
 
