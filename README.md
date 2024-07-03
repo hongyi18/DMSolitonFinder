@@ -1,5 +1,8 @@
 # DMSolitonFinder
 
+DMSolitonFinder is a Mathematica package devoted to solving dark matter soliton profiles in an automated way. It will dynamically adjust the boundary conditions and the
+spatial range of solutions until localized solutions are found with the requested precision and accuracy. This package was [featured in the Staff Picks and Publication Materials columns on Wolfram Community](https://community.wolfram.com/groups/-/m/t/3203564).
+
 ## Installation/update
 
 **Method 1:** One can directly import the package from the web every time, using
@@ -19,7 +22,8 @@ To load the package, simply run
 **Note:** If the installation/update fails, please check your internet connection by following the guide [Troubleshooting Internet Connectivity Problems](https://reference.wolfram.com/language/tutorial/TroubleshootingInternetConnectivity.html).
 
 ## Tutorial
-Please follow the Mathematica notebook [Get started on DMSolitonFinder.nb](https://github.com/hongyi18/DMSolitonFinder/blob/main/Get%20started%20on%20DMSolitonFinder.nb) for a quick tutorial. For definitions and equations used in the package, refer to the paper [arXiv:2406.05031](https://arxiv.org/abs/2406.05031).
+Please follow the Mathematica notebook [Get started on DMSolitonFinder.nb](https://github.com/hongyi18/DMSolitonFinder/blob/main/Get%20started%20on%20DMSolitonFinder.nb) for a quick tutorial. 
+For a more advanced example demonstrating the mass-radius relation for solitons with self-interactions, refer to [this post](https://community.wolfram.com/groups/-/m/t/3203564) on Wolfram Community. For definitions and equations used in the package, refer to the paper [arXiv:2406.05031](https://arxiv.org/abs/2406.05031).
 
 ## Common questions in finding optimal soliton profiles
 **1. How can I find out what options are available for each function?** <br>
