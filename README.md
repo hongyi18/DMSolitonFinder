@@ -25,7 +25,8 @@ To load the package, simply run
 Please follow the Mathematica notebook [Get started on DMSolitonFinder.nb](https://github.com/hongyi18/DMSolitonFinder/blob/main/Get%20started%20on%20DMSolitonFinder.nb) for a quick tutorial. 
 For a more advanced example demonstrating the mass-radius relation for solitons with self-interactions, refer to [this post](https://community.wolfram.com/groups/-/m/t/3203564) on Wolfram Community. For definitions and equations used in the package, refer to the paper [arXiv:2406.05031](https://arxiv.org/abs/2406.05031).
 
-<a href="https://raw.githubusercontent.com/hongyi18/DMSolitonFinder/main/Get%20started%20on%20DMSolitonFinder.nb" download>Get started on DMSolitonFinder.nb</a>
+<a href="https://raw.githubusercontent.com/hongyi18/DMSolitonFinder/main/Get%20started%20on%20DMSolitonFinder.nb" download="DMSolitonFinder.nb">Download File</a>
+
 
 ## Common questions in finding optimal soliton profiles
 **1. How can I find out what options are available for each function?** <br>
