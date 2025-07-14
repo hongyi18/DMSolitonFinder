@@ -1,11 +1,22 @@
 cff-version: 1.2.0
-message: "If you use this code, please cite it as below."
+message: "If you use this code, please cite the following paper."
+title: "Unified view of scalar and vector dark matter solitons"
 authors:
-- family-names: "Zhang"
-  given-names: "Hong-Yi"
-  orcid: "https://orcid.org/0000-0003-4176-5707"
-title: "DMSolitonFinder"
-version: 1.0.0
-doi: https://doi.org/10.1007/JHEP04(2025)174
+  - family-names: "Zhang"
+    given-names: "Hong-Yi"
 date-released: 2024-06-07
+doi: "10.1007/JHEP04(2025)174"
 url: "https://github.com/hongyi18/DMSolitonFinder"
+version: "1.0.0"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Zhang"
+      given-names: "Hong-Yi"
+  title: "Unified view of scalar and vector dark matter solitons"
+  journal: "Journal of High Energy Physics"
+  volume: "04"
+  pages: "174"
+  year: "2025"
+  doi: "10.1007/JHEP04(2025)174"
+  url: "https://arxiv.org/abs/2406.05031"
